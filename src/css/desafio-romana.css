@@ -1,0 +1,28 @@
+body {
+    font-family: "Verdana";
+    background-color: rgb(12, 15, 19);
+}
+header {
+    position: relative;
+}
+header nav {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+}
+header nav ul li {
+    display: inline;
+    margin-left: 10px;
+    font-size: 20px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(223, 223, 0);
+    transition: color 0.3s ease-in-out;
+}
+header nav ul li a:hover {
+    color: rgb(150, 150, 0);
+}
+p {
+    color: white;
+}
