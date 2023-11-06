@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/desafio-romana.css">
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/desafio-romana.css">
     <title>Desafio Romana</title>
+    <style>
+        /* Background */
+        #content {
+            height: 1080px;
+            background-image: url("/src/img/bike-background.png");
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
-        <a href="."><img src="src/img/desafio-romana-branco-logo.png" alt="Desafio Romana" height="100px"></a>
+        <a href="."><img src="/src/img/romana-mtb-branco-logo.png" alt="Romana MTB" height="100px"></a>
         <nav>
             <ul>
-                <li><a href=".">INÍCIO</a></li>
-                <li><a href="fotos">FOTOS</a></li>
-                <li><a href="regulamento">REGULAMENTO</a></li>
-                <li><a href="inscricao">INSCRIÇÃO</a></li>
+                <li><a href="/">INÍCIO</a></li>
+                <li><a href="/fotos">FOTOS</a></li>
+                <li><a href="/regulamento">REGULAMENTO</a></li>
+                <li><a href="/inscricao">INSCRIÇÃO</a></li>
             </ul>
         </nav>
     </header>
-    <p id="demo"></p>
-    <script src="src/js/desafio-romana.js"></script>
+    <!-- Conteudo -->
+    <div id="content">
+        <div>
+            <img id="desafio-romana-mtb" src="/src/img/desafio-romana-mtb-logo.png" alt="Desafio Romana MTB" height="250px" style="margin-top: 40px;">
+            <h1>04 / 02 / 2024</h1>
+            <h2>BARROSO / MG</h2>
+            <h3>EM PROL DO INSTITUTO ABC</h3>
+            <p>
+                Informações no site:
+                <br>
+                romanamtb.com.br
+            </p>
+            <img src="/src/img/romana-mtb-branco-logo.png" alt="Romana MTB" height="100px" style="top: 0px;"><img src="/src/img/instituto-abc-logo.png" alt="Instituto ABC" height="150px">
+        </div>
+    </div>
+    <footer>
+    </footer>
 </body>
 </html>

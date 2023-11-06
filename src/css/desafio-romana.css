@@ -1,27 +1,69 @@
+@font-face {
+    font-family: "Michelin Bold";
+    src: url("/src/font/michelin-bold.ttf");
+}
+
 body {
-    font-family: "Verdana";
+    font-family: "Arial";
     background-color: #0d1117;
     color: #ffffff;
     line-height: 1.1;
 }
+
+/* Cabeçalho */
 header {
-    position: relative;
+    background-color: #000000bf;
+    position:fixed;
+    width: 100%;
+    z-index: 1;
+}
+header img {
+    margin: 15px;
 }
 header nav {
     position: absolute;
-    bottom: 0;
-    right: 15px;
+    font-family: "Michelin Bold";
+    margin: 15px;
+    bottom: 0px;
+    right: 0px;
 }
-header nav ul li {
-    display: inline;
-    margin-left: 10px;
+header nav li {
+    float: left;
+    margin-left: 15px;
     font-size: 20px;
 }
-header nav ul li a {
+header nav a {
     text-decoration: none;
     color: #dfdf00;
     transition: color 0.3s ease-in-out;
 }
-header nav ul li a:hover {
+header nav a:hover {
     color: #969600;
+}
+
+/* Conteudo */
+#content div {
+    position: relative;
+    top: 134px;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#content img {
+    margin: 15px;
+}
+#content h1 {
+    color: #e49e0f;
+    font-size: 50px;
+    margin: 15px;
+}
+#content h2 {
+    margin: 15px;
+    font-size: 50px;
+}
+#content h3 {
+    margin: 15px;
+}
+#content p {
+    margin: 15px;
 }
