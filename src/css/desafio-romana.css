@@ -1,6 +1,8 @@
 body {
     font-family: "Verdana";
-    background-color: rgb(12, 15, 19);
+    background-color: #0d1117;
+    color: #ffffff;
+    line-height: 1.1;
 }
 header {
     position: relative;
@@ -17,12 +19,9 @@ header nav ul li {
 }
 header nav ul li a {
     text-decoration: none;
-    color: rgb(223, 223, 0);
+    color: #dfdf00;
     transition: color 0.3s ease-in-out;
 }
 header nav ul li a:hover {
-    color: rgb(150, 150, 0);
-}
-p {
-    color: white;
+    color: #969600;
 }
