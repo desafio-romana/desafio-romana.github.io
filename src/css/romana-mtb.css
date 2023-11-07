@@ -6,14 +6,14 @@
 body {
     font-family: "Arial";
     background-color: #0d1117;
-    color: #ffffff;
+    color: #fff;
     line-height: 1.1;
 }
 
 /* Cabeçalho */
 header {
     background-color: #000000bf;
-    position:fixed;
+    position: fixed;
     width: 100%;
     z-index: 1;
 }
@@ -44,7 +44,7 @@ header nav a:hover {
 /* Conteudo */
 #content div {
     position: relative;
-    top: 134px;
+    top: 150px;
     font-weight: bold;
     margin-left: 5%;
     margin-right: 5%;
@@ -66,4 +66,17 @@ header nav a:hover {
 }
 #content p {
     margin: 15px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #000000bf;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+footer p {
+    margin: 10px;
 }
