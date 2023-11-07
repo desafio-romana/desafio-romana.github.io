@@ -67,6 +67,14 @@ header nav a:hover {
 #content p {
     margin: 15px;
 }
+#content a {
+    color: #fff; 
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+#content a:hover {
+    color: #aaa;
+}
 
 /* Rodapé */
 footer {
