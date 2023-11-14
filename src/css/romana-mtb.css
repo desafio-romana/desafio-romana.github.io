@@ -10,6 +10,8 @@ body {
     line-height: 1.1;
 }
 
+
+/* COMPUTADOR */
 /* Cabeçalho */
 header {
     background-color: #000000bf;
@@ -87,4 +89,58 @@ footer {
 }
 footer p {
     margin: 10px;
+}
+
+
+/* CELULAR */
+@media (max-width: 800px /* min-width: 450px */) {
+    /* Cabeçalho */
+    header {
+    }
+    header img {
+        margin: 15px;
+    }
+    header nav {
+        margin: 15px;
+    }
+    header nav li {
+        float: initial;
+        margin-left: 15px;
+        font-size: 20px;
+    }
+    header nav a {
+    }
+
+    /* Conteudo */
+    #content div {
+        top: 150px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #content img {
+        margin: 15px;
+    }
+    #content h1 {
+        font-size: 50px;
+        margin: 15px;
+    }
+    #content h2 {
+        margin: 15px;
+        font-size: 50px;
+    }
+    #content h3 {
+        margin: 15px;
+    }
+    #content p {
+        margin: 15px;
+    }
+    #content a {
+    }
+
+    /* Rodapé */
+    footer {
+    }
+    footer p {
+        margin: 10px;
+    }
 }
