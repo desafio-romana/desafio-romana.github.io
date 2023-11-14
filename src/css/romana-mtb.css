@@ -65,6 +65,10 @@ header nav a:hover {
     font-size: 50px;
 }
 #content h3 {
+    font-size: 30px;
+    margin: 15px;
+}
+#content h4 {
     font-size: 20px;
     margin: 15px;
 }
