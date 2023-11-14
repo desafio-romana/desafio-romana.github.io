@@ -16,6 +16,12 @@
             height: 70vh;
             width: 100%;
         }
+
+        /* Regulamento HTML */
+        #regulamento-html {
+            height: 65vh;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -33,7 +39,10 @@
     <div id="content">
         <div>
             <h1>Regulamento</h1>
-            <object id="regulamento-pdf" data="/src/pdf/regulamento.pdf" type="application/pdf">Seu navegador não suporta arquivos em PDF. Baixe-o <a href="/src/pdf/regulamento.pdf">aqui</a>.</object>
+            <object id="regulamento-pdf" data="/src/pdf/regulamento.pdf" type="application/pdf">
+                <iframe id="regulamento-html" src="/src/html/regulamento.html"></iframe>
+                <p><a href="/src/pdf/regulamento.pdf">Baixar PDF</a></p>
+            </object>
         </div>
     </div>
     <footer>
