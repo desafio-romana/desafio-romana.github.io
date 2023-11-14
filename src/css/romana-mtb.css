@@ -19,6 +19,7 @@ header {
     z-index: 1;
 }
 header img {
+    height: 100px;
     margin: 15px;
 }
 header nav {
@@ -49,7 +50,7 @@ header nav a:hover {
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 15vh;
-    padding-bottom: 50px;
+    padding-bottom: 5vh;
 }
 #content img {
     margin: 15px;
@@ -64,9 +65,11 @@ header nav a:hover {
     font-size: 50px;
 }
 #content h3 {
+    font-size: 20px;
     margin: 15px;
 }
 #content p {
+    font-size: 20px;
     margin: 15px;
 }
 #content a {
@@ -85,12 +88,13 @@ footer {
     text-align: center;
 }
 footer p {
+    font-size: 20px;
     margin: 10px;
 }
 
 
-/* Tela < 800px */
-@media (max-width: 800px /* min-width: 450px */) {
+/* Tela < 850px */
+@media (max-width: 850px) {
     /* Cabeçalho */
     header img {
         margin: 15px;
@@ -130,5 +134,35 @@ footer p {
     /* Rodapé */
     footer p {
         margin: 10px;
+    }
+}
+
+/* Tela < 530px */
+@media (max-width: 530px) {
+    /* Cabeçalho */
+    header img {
+        height: 75px;
+    }
+    header nav li {
+        font-size: 100%;
+    }
+    
+    /* Conteudo */
+    #content h1 {
+        font-size: 35px;
+    }
+    #content h2 {
+        font-size: 35px;
+    }
+    #content h3 {
+        font-size: 12px;
+    }
+    #content p {
+        font-size: 12px;
+    }
+
+    /* Rodapé */
+    footer p {
+        font-size: 12px;
     }
 }
