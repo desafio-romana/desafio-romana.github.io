@@ -34,10 +34,22 @@
             height: 200px;
         }
         
+        /* Tela < 1100px */
+        @media (max-width: 1100px) {
+            /* Centralizar */
+            #content {
+                text-align: center;
+            }
+            #content .text {
+                text-align: center;
+                margin: auto;
+            }
+        }
+
 
         /* Tela < 530px */
         @media (max-width: 530px) {
-            /**/
+            /* Background */
             #content .text {
                 padding: 5px;
                 width: 300px;
@@ -66,7 +78,7 @@
         </nav>
     </header>
     <div id="content">
-        <div>
+        <div class="right">
             <img id="desafio-romana-mtb" src="/src/img/desafio-romana-mtb-logo.png" alt="Romana MTB MTB">
             <div class="text">
                 <h1>04 / 02 / 2024</h1>
