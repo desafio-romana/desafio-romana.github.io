@@ -14,8 +14,8 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #000000bf;
     position: fixed;
+    background-color: #000000bf;
     width: 100%;
     height: 135px;
     z-index: 1;
