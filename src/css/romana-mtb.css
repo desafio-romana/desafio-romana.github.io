@@ -1,4 +1,5 @@
 @font-face {
+    font-display: swap;
     font-family: "Michelin Bold";
     src: url("/src/font/michelin-bold.ttf");
 }
@@ -16,6 +17,7 @@ header {
     background-color: #000000bf;
     position: fixed;
     width: 100%;
+    height: 135px;
     z-index: 1;
 }
 header img {
@@ -84,6 +86,9 @@ header nav a:hover {
 #content a:hover {
     color: #2f5eb6;
 }
+#content b {
+    font-weight: bolder;
+}
 
 /* Rodapé */
 footer {
@@ -116,10 +121,6 @@ footer p {
     }
 
     /* Conteudo */
-    #content div {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
     #content img {
         margin: 15px;
     }
@@ -147,6 +148,9 @@ footer p {
 /* Tela < 530px */
 @media (max-width: 530px) {
     /* Cabeçalho */
+    header {
+        height: 105px;
+    }
     header img {
         height: 75px;
     }

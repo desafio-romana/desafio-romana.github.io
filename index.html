@@ -13,7 +13,7 @@
     <style>
         /* Background */
         #content {
-            height: 100vh;
+            height: 100%;
             background-image: url("/src/img/bike-background.png");
             background-size: cover;
             background-position: right;
@@ -22,7 +22,7 @@
         #content .text {
             background-color: #000000bf;
             padding: 10px;
-            width: 425px;
+            width: 340px;
             border-radius: 10px;
         }
 
@@ -33,19 +33,63 @@
         #instituto-abc-logo {
             height: 200px;
         }
-        
+        #content .image {
+            padding: 0px;
+            text-align: center;
+        }
+        #left .image {
+            width: 360px;
+        }
+
+        /* Divisão */
+        #content {
+            display: flex;
+            padding-bottom: 7vh;
+        }
+        #left {
+            padding: auto;
+            width: 100%;
+            text-align: left;
+        }
+        #left .text {
+            margin-right: auto;
+        }
+        #right {
+            top: 15vh;
+            height: 400px;
+            width: 100%;
+            text-align: right;
+        }
+        #right .text {
+            margin-left: auto;
+        }
+
+        /* Fonte */
+        #desafio-text h2 {
+            font-size: 40px;
+        }
+        #desafio-text h3 {
+            font-size: 21px;
+        }
+
         /* Tela < 1100px */
         @media (max-width: 1100px) {
             /* Centralizar */
-            #content {
-                text-align: center;
-            }
-            #content .text {
+            #content div {
                 text-align: center;
                 margin: auto;
+                padding-left: 0px;
+            }
+
+            /* Divisão */
+            #content {
+                display: block;
+            }
+            #content #right {
+                top: 0px;
+                padding-top: 0px;
             }
         }
-
 
         /* Tela < 530px */
         @media (max-width: 530px) {
@@ -67,25 +111,40 @@
 </head>
 <body>
     <header>
-        <a href="/"><img src="/src/img/romana-mtb-branco-logo.png" alt="Romana MTB" height="100px"></a>
+        <a href="/"><img src="/src/img/romana-mtb-branco-logo.png" alt="Logo Romana MTB."></a>
         <nav>
             <ul>
-                <li><a href="/">INÍCIO</a></li>
                 <li><a href="/fotos">FOTOS</a></li>
                 <li><a href="/regulamento">REGULAMENTO</a></li>
+                <li><a href="/resultados">RESULTADOS</a></li>
                 <li><a href="/inscricao" target="_blank">INSCRIÇÃO</a></li>
             </ul>
         </nav>
     </header>
     <div id="content">
-        <div class="right">
-            <img id="desafio-romana-mtb" src="/src/img/desafio-romana-mtb-logo.png" alt="Romana MTB MTB">
-            <div class="text">
+        <div id="left">
+            <div class="image">
+                <h1>XCO</h1>
+                <img id="desafio-romana-mtb" src="/src/img/desafio-romana-mtb-logo.png" alt="Logo Desafio Romana MTB.">
+            </div>
+            <div id="desafio-text" class="text">
                 <h1>04 / 02 / 2024</h1>
                 <h2>BARROSO / MG</h2>
-                <h4>EM PROL DO INSTITUTO ABC</h4>
+                <h3>EM PROL DO INSTITUTO ABC</h3>
             </div>
-            <a href="https://institutoabc.org.br" target="_blank"><img id="instituto-abc-logo" src="/src/img/instituto-abc-logo.png" alt="Instituto ABC"></a><br>
+            <div class="image">
+                <a href="https://institutoabc.org.br" target="_blank"><img id="instituto-abc-logo" src="/src/img/instituto-abc-logo.png" alt="Logo Instituto ABC."></a><br>
+            </div>
+        </div>
+        <div id="right">
+            <h1>PEDAL DE FATIMA</h1>
+            <div class="text">
+                <h2>12 / 05 / 2024</h2>
+            </div>
+            <h1>PEDAL DE SANT'ANA</h1>
+            <div class="text">
+                <h2>18 / 07 / 2024</h2>
+            </div>
         </div>
     </div>
     <footer>
