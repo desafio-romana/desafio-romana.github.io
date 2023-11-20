@@ -105,7 +105,7 @@ footer p {
 }
 
 
-/* Tela < 850px */
+/* Tela <= 850px */
 @media (max-width: 850px) {
     /* Cabeçalho */
     header img {
@@ -145,7 +145,7 @@ footer p {
     }
 }
 
-/* Tela < 530px */
+/* Tela <= 530px */
 @media (max-width: 530px) {
     /* Cabeçalho */
     header {
