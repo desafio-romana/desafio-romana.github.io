@@ -105,8 +105,8 @@ footer p {
 }
 
 
-/* Tela <= 850px */
-@media (max-width: 850px) {
+/* Tela <= 900px */
+@media (max-width: 900px) {
     /* Cabeçalho */
     header img {
         margin: 15px;
