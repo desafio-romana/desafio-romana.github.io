@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
+    <meta property="og:site_name" content="Romana MTB">
     <meta name="description" content="Romana MTB, eventos de bike.">
     <title>Romana MTB</title>
     <link rel="stylesheet" href="/src/css/reset.css">
     <link rel="stylesheet" href="/src/css/romana-mtb.css">
-    <link rel="icon" href="/src/img/romana-mtb-icon.webp">
+    <link rel="icon" href="/src/img/romana-mtb/romana-mtb-icon.webp">
     <style>
         /* Background */
         #content {
             height: 100%;
-            background-image: url("/src/img/bike-background.webp");
+            background-image: url("/src/img/romana-mtb/bike-background.webp");
             background-size: cover;
             background-position: right;
             background-repeat: no-repeat;
@@ -22,6 +23,13 @@
             background-color: #000000bf;
             padding: 10px;
             width: 340px;
+            border-radius: 10px;
+            margin-bottom: 1vh;
+        }
+        #content #partners {
+            background-color: #ffffff94;
+            padding: 10px;
+            width: 90%;
             border-radius: 10px;
             margin-bottom: 1vh;
         }
@@ -46,18 +54,41 @@
         #content .text h3 {
             font-size: 21px;
         }
+        #partners h2 {
+            color: #333333;
+        }
+
+
+        /* Patrocínio */
+        #bottom {
+            bottom: 50px;
+        }
+        #partners {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        #bottom div {
+            text-align: center;
+            margin: auto;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        #bottom img {
+            vertical-align: middle;
+        }
 
 
         /* Tela >= 1101px */
         @media (min-width: 1101px) {
             /* Divisão */
-            #content {
+            .flex {
                 display: flex;
                 padding-bottom: 7vh;
             }
             #left {
                 padding: auto;
                 width: 100%;
+                height: 100%;
                 text-align: left;
             }
             #left .text {
@@ -65,7 +96,7 @@
             }
             #right {
                 top: 15vh;
-                height: 400px;
+                height: 100%;
                 width: 100%;
                 text-align: right;
             }
@@ -114,7 +145,7 @@
 </head>
 <body>
     <header>
-        <a href="/"><img src="/src/img/romana-mtb-branco-logo.webp" alt="Logo Romana MTB."></a>
+        <a href="/"><img src="/src/img/romana-mtb/romana-mtb-branco-logo.webp" alt="Logo Romana MTB."></a>
         <nav>
             <ul>
                 <li><a href="/fotos">FOTOS</a></li>
@@ -125,30 +156,52 @@
         </nav>
     </header>
     <div id="content">
-        <div id="left">
-            <div class="image">
-                <img id="desafio-romana-mtb" src="/src/img/desafio-romana-mtb-logo.webp" alt="Logo Desafio Romana MTB.">
+        <div class="flex" style="padding: 0px;">
+            <div id="left">
+                <div class="image">
+                    <img id="desafio-romana-mtb" src="/src/img/romana-mtb/desafio-romana-mtb-logo.webp" alt="Logo Desafio Romana MTB.">
+                </div>
+                <div id="desafio-text" class="text">
+                    <h2>04 / 02 / 2024</h2>
+                    <h1>XCO</h1>
+                    <h2>BARROSO / MG</h2>
+                    <h3>EM PROL DO INSTITUTO ABC</h3>
+                </div>
+                <div class="image">
+                    <a href="https://institutoabc.org.br" target="_blank"><img id="instituto-abc-logo" src="/src/img/partners/instituto-abc.webp" alt="Logo Instituto ABC."></a><br>
+                </div>
             </div>
-            <div id="desafio-text" class="text">
-                <h2>04 / 02 / 2024</h2>
-                <h1>XCO</h1>
-                <h2>BARROSO / MG</h2>
-                <h3>EM PROL DO INSTITUTO ABC</h3>
-            </div>
-            <div class="image">
-                <a href="https://institutoabc.org.br" target="_blank"><img id="instituto-abc-logo" src="/src/img/instituto-abc-logo.webp" alt="Logo Instituto ABC."></a><br>
+            <div id="right">
+                <div class="text">
+                    <h2>12 / 05 / 2024</h2>
+                    <h1>PEDAL DE FÁTIMA</h1>
+                    <h3>TURISMO</h3>
+                </div>
+                <div class="text">
+                    <h2>18 / 07 / 2024</h2>
+                    <h1>PEDAL DE SANT'ANA</h1>
+                    <h3>TURISMO</h3>
+                </div>
             </div>
         </div>
-        <div id="right">
-            <div class="text">
-                <h2>12 / 05 / 2024</h2>
-                <h1>PEDAL DE FÁTIMA</h1>
-                <h3>TURISMO</h3>
-            </div>
-            <div class="text">
-                <h2>18 / 07 / 2024</h2>
-                <h1>PEDAL DE SANT'ANA</h1>
-                <h3>TURISMO</h3>
+        <div id="bottom" style="padding: 0px;">
+            <div id="partners">
+                <h2>PARCEIROS:</h2>
+                <div style="padding: 0px;">
+                    <img src="/src/img/partners/automarax.webp" alt="Logo Automarax.">
+                    <img src="/src/img/partners/bike-podium.webp" alt="Logo Bike Podium.">
+                    <img src="/src/img/partners/bombeiros-voluntarios.webp" alt="Logo Bombeiros Voluntarios.">
+                    <img src="/src/img/partners/conara.webp" alt="Logo Conara.">
+                    <img src="/src/img/partners/csn.webp" alt="Logo CSN.">
+                    <img src="/src/img/partners/del-rey-bike.webp" alt="Logo Del Rey Bike.">
+                    <img src="/src/img/partners/fluir-bike.webp" alt="Logo Fluir Bike.">
+                    <img src="/src/img/partners/mlj.webp" alt="Logo MLJ.">
+                    <img src="/src/img/partners/multiplanar.webp" alt="Logo Multiplanar.">
+                    <img src="/src/img/partners/racing-bike.webp" alt="Logo Racing Bike.">
+                    <img src="/src/img/partners/sicoob-mais.webp" alt="Logo Sicoob Mais.">
+                    <img src="/src/img/partners/sigo.webp" alt="Logo SIGO.">
+                    <img src="/src/img/partners/vidromix.webp" alt="Logo Vidromix.">
+                </div>
             </div>
         </div>
     </div>
