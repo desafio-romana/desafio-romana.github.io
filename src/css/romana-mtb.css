@@ -46,7 +46,7 @@ header nav a:hover {
 }
 
 /* Conteudo */
-#content div {
+#content {
     position: relative;
     font-weight: bold;
     padding-left: 5%;

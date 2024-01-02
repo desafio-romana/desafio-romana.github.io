@@ -10,6 +10,36 @@
     <link rel="stylesheet" href="/src/css/reset.css">
     <link rel="stylesheet" href="/src/css/romana-mtb.css">
     <link rel="icon" href="/src/img/romana-mtb/romana-mtb-icon.webp">
+    <style>
+        /* Imagens */
+        #content div {
+            padding-top: 10px;
+            text-align: center;
+        }
+        #content div img {
+            padding: 5px;
+            margin: 0px;
+            max-height: 250px;
+        }
+
+
+        /* Tela <= 1100px */
+        @media (max-width: 1100px) {
+            /* Imagens */
+            #content div img {
+                max-height: 150px;
+            }
+        }
+
+        
+        /* Tela <= 530px */
+        @media (max-width: 530px) {
+            /* Imagens */
+            #content div img {
+                max-height: 100px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,9 +54,22 @@
         </nav>
     </header>
     <div id="content">
-        <div>
-            <h1>Fotos</h1>
-            <p>Sem fotos no momento.</p>
+        <h1>Fotos</h1>
+        <div id="mtb-fest">
+            <h2>MTB FEST</h2>
+            <script>
+                for (let i = 0; i <= 81; i++) {
+                    document.write('<img src="/src/img/photos/mtb-fest/img-' + i.toString().padStart(3, '0') + '.webp" alt="Foto MTB Fest.">');
+                }
+            </script>
+        </div>
+        <div id="apae">
+            <h2>1° TRILHÃO APAE:</h2>
+            <script>
+                for (let i = 0; i <= 62; i++) {
+                    document.write('<img src="/src/img/photos/apae/img-' + i.toString().padStart(3, '0') + '.webp" alt="Foto 1º Trilhão APAE.">');
+                }
+            </script>
         </div>
     </div>
     <footer>
