@@ -15,21 +15,20 @@ jobs:
       - name: set-up-node
         uses: actions/setup-node@v2
         with:
-          node-version: '20'
+          node-version: '16'
 
       - name: install-dependencies
         run: |
-          cd src  # Ajuste para a pasta onde está o package.json
           npm install
+          npm install html-minifier -g
+          npm install postcss-cli cssnano -g
 
       - name: minify-html-files
         run: |
-          npm install html-minifier -g
           find . -name 'index.html' -exec sh -c 'html-minifier --collapse-whitespace --remove-comments -o "$1" "$1"' _ {} \;
 
       - name: extract-and-minify-css
         run: |
-          npm install postcss-cli cssnano -g
           mkdir -p ./dist/css
           for file in $(find . -name 'index.html'); do
             grep -o '<link.*href="[^"]*"' "$file" | sed -E 's/.*href="([^"]*)".*/\1/' | while read cssfile; do
