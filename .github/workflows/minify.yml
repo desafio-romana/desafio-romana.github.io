@@ -20,19 +20,18 @@ jobs:
       - name: install-dependencies
         run: |
           npm install
-          npm install html-minifier -g
-          npm install postcss-cli cssnano -g
+          npm install html-minifier postcss-cli cssnano --save-dev
 
       - name: minify-html-files
         run: |
-          find . -name 'index.html' -exec sh -c 'html-minifier --collapse-whitespace --remove-comments -o "$1" "$1"' _ {} \;
+          find . -name 'index.html' -exec sh -c 'npx html-minifier --collapse-whitespace --remove-comments -o "$1" "$1"' _ {} \;
 
       - name: extract-and-minify-css
         run: |
           mkdir -p ./dist/css
           for file in $(find . -name 'index.html'); do
             grep -o '<link.*href="[^"]*"' "$file" | sed -E 's/.*href="([^"]*)".*/\1/' | while read cssfile; do
-              postcss "$cssfile" --use cssnano -d ./dist/css
+              npx postcss "$cssfile" --use cssnano -d ./dist/css
             done
           done
 
