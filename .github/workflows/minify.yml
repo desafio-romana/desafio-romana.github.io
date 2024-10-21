@@ -18,22 +18,33 @@ jobs:
           node-version: '20'
 
       - name: install-dependencies
-        run: npm install
+        run: |
+          cd src  # Ajuste para a pasta onde está o package.json
+          npm install
 
       - name: minify-html-files
         run: |
           npm install html-minifier -g
           find . -name 'index.html' -exec sh -c 'html-minifier --collapse-whitespace --remove-comments -o "$1" "$1"' _ {} \;
 
-      - name: minify-css-files
+      - name: extract-and-minify-css
         run: |
-          npm install cssnano-cli -g
-          for file in src/css/*.css; do
-            cssnano "$file" "$file"
+          npm install postcss-cli cssnano -g
+          mkdir -p ./dist/css
+          for file in $(find . -name 'index.html'); do
+            grep -o '<link.*href="[^"]*"' "$file" | sed -E 's/.*href="([^"]*)".*/\1/' | while read cssfile; do
+              postcss "$cssfile" --use cssnano -d ./dist/css
+            done
           done
 
-      - name: deploy-to-github-pages
+      - name: copy-minified-files
+        run: |
+          mkdir -p ./dist
+          cp -r ./src/* ./dist
+          cp -r ./dist/css ./dist
+
+      - name: deploy-to-gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./dist  # Publica o diretório dist
