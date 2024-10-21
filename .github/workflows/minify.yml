@@ -1,0 +1,39 @@
+name: Minify Assets
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Minify HTML
+        run: |
+          npm install html-minifier -g
+          find src -name 'index.html' -exec sh -c 'html-minifier --collapse-whitespace --remove-comments -o "$1" "$1"' _ {} \;
+
+      - name: Minify CSS
+        run: |
+          npm install cssnano-cli -g
+          for file in src/css/*.css; do
+            cssnano "$file" "$file"
+          done
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src
