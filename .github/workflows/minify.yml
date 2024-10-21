@@ -12,30 +12,26 @@ jobs:
       - name: checkout-code
         uses: actions/checkout@v2
 
-      # Instalar Node.js.
-      - name: set-up-node
+      # Istalar Node.js.
+      - name: install-dependencies
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-
-      # Instalar o Minify.
+      
+      # Instalar npm e pacotes necessários. 
       - name: install-dependencies
-        run: npm install minify -g
+        run: npm install html-minifier cssnano-cli -g
 
-      # Minificar arquivos HTML e CSS.
-      - name: minify-files
-        run: |
-          # Minificar arquivos HTML
-          find . -name 'index.html' -exec sh -c 'minify --html --output "$1" "$1"' _ {} \;
-
-          # Minificar arquivos CSS
-          for file in src/css/*.css; do
-            minify --css --output "$file" "$file"
-          done
-          find . -name 'style.css' -exec sh -c 'minify --css --output "$1" "$1"' _ {} \;
+      # Miniaturizar os HTML.
+      - name: minify-html
+        run: find . -name '*.html' -exec sh -c 'html-minifier --collapse-whitespace --remove-comments -o "$1" "$1"' _ {} \;
+      
+      # Miniaturizar os CSS.
+      - name: minify-css
+        run: find . -name '*.css' -exec sh -c 'cssnano "$1" "$1"' _ {} \;
 
       - name: deploy-to-github-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{secrets.GITHUB_TOKEN}}
           publish_dir: .
