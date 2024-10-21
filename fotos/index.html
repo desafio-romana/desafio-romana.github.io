@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index, follow"><meta property="og:site_name" content="Romana MTB"><meta name="description" content="Fotos dos eventos da Romana MTB."><title>Fotos | Romana MTB</title><link rel="stylesheet" href="/src/css/reset.css"><link rel="stylesheet" href="/src/css/romana-mtb.css"><link rel="icon" href="/src/img/romana-mtb/romana-mtb-icon.webp"><style>/* Imagens */
+        #content div {
+            padding-top: 10px;
+            text-align: center;
+        }
+        #content div img {
+            padding: 5px;
+            margin: 0px;
+            max-height: 250px;
+            max-width: 85vw;
+        }
+
+
+        /* Tela <= 1100px */
+        @media (max-width: 1100px) {
+            /* Imagens */
+            #content div img {
+                max-height: 200px;
+            }
+        }
+
+        
+        /* Tela <= 530px */
+        @media (max-width: 530px) {
+            /* Imagens */
+            #content div img {
+                max-height: 150px;
+            }
+        }</style></head><body><header><a href="/"><img src="/src/img/romana-mtb/romana-mtb-branco-logo.webp" alt="Logo Romana MTB."></a><nav><ul><li><a href="/fotos/">FOTOS</a></li><li><a href="/regulamento/">REGULAMENTO</a></li><li><a href="/inscricao/">INSCRIÇÃO</a></li></ul></nav></header><div id="content"><h1>Fotos</h1><div id="mtb-fest-2023"><h2>MTB FEST 2023</h2></div><div id="apae-2019"><h2>TRILHÃO APAE 2019</h2></div></div><footer><p>© Romana MTB - Todos os direitos reservados.</p></footer><script>document.addEventListener("DOMContentLoaded", function() {
+            var photosContainer = document.getElementById('apae-2019');
+            for (let i = 0; i <= 62; i++) {
+                // Cria um elemento de imagem
+                var img = document.createElement('img');
+                // Src e Alt da imagem
+                img.src = "/src/img/photos/apae-2019/img-" + i.toString().padStart(3, "0") + ".webp";
+                img.alt = "Foto Trilhão APAE 2019.";
+                // Adiciona a imagem ao div
+                photosContainer.appendChild(img);
+            }
+            
+            var photosContainer = document.getElementById('mtb-fest-2023');
+            for (let i = 0; i <= 81; i++) {
+                var img = document.createElement('img');
+                img.src = "/src/img/photos/mtb-fest-2023/img-" + i.toString().padStart(3, "0") + ".webp";
+                img.alt = "Foto MTB Fest 2023.";
+                photosContainer.appendChild(img);
+            }
+        });</script></body></html>
