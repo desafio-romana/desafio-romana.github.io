@@ -1,1 +1,184 @@
-@font-face{font-display:swap;font-family:Michelin Bold;src:url(/src/font/michelin-bold.ttf)}body{font-family:Arial;background-color:#0d1117;color:#fff;line-height:1.1;max-width:100vw}header{position:fixed;background-color:#000000bf;width:100%;height:135px;z-index:1}header img{height:100px;margin:15px}header nav{position:absolute;font-family:Michelin Bold;margin:15px;bottom:0;right:0}header nav li{float:left;margin-left:15px;font-size:20px}header nav a{text-decoration:none;color:#dfdf00;transition:color .3s ease-in-out}header nav a:hover{color:#969600}#content{position:relative;font-weight:700;padding:150px 5% 50px}#content img{margin:15px}#content h1{color:#e49e0f;font-size:50px;margin:15px}#content h2{margin:15px;font-size:40px}#content h3{font-size:30px;margin:15px}#content h4,#content p{font-size:20px;margin:15px}#content a{color:#427fdb;text-decoration:none;transition:color .3s ease-in-out}#content a:hover{color:#2f5eb6}#content b{font-weight:bolder}footer{background-color:#000000bf;position:fixed;width:100%;left:0;bottom:0;text-align:center}footer p{font-size:20px;margin:10px}@media (max-width:900px){header img,header nav{margin:15px}header nav li{float:none;margin-left:15px}#content h1,#content h2,#content h3,#content img,#content p{margin:15px}footer p{margin:10px}}@media (max-width:530px){header{height:105px}header img{height:75px}header nav li{font-size:100%}#content{padding-top:110px;padding-bottom:35px}#content h1{font-size:35px}#content h2{font-size:29px}#content h3{font-size:15px}#content h4,#content p,footer p{font-size:12px}}
+@font-face {
+    font-display: swap;
+    font-family: "Michelin Bold";
+    src: url("/src/font/michelin-bold.ttf");
+}
+
+body {
+    font-family: "Arial";
+    background-color: #0d1117;
+    color: #fff;
+    line-height: 1.1;
+    max-width: 100vw;
+}
+
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    background-color: #000000bf;
+    width: 100%;
+    height: 135px;
+    z-index: 1;
+}
+header img {
+    height: 100px;
+    margin: 15px;
+}
+header nav {
+    position: absolute;
+    font-family: "Michelin Bold";
+    margin: 15px;
+    bottom: 0px;
+    right: 0px;
+}
+header nav li {
+    float: left;
+    margin-left: 15px;
+    font-size: 20px;
+}
+header nav a {
+    text-decoration: none;
+    color: #dfdf00;
+    transition: color 0.3s ease-in-out;
+}
+header nav a:hover {
+    color: #969600;
+}
+
+/* Conteudo */
+#content {
+    position: relative;
+    font-weight: bold;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+#content img {
+    margin: 15px;
+}
+#content h1 {
+    color: #e49e0f;
+    font-size: 50px;
+    margin: 15px;
+}
+#content h2 {
+    margin: 15px;
+    font-size: 40px;
+}
+#content h3 {
+    font-size: 30px;
+    margin: 15px;
+}
+#content h4 {
+    font-size: 20px;
+    margin: 15px;
+}
+#content p {
+    font-size: 20px;
+    margin: 15px;
+}
+#content a {
+    color: #427fdb; 
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+#content a:hover {
+    color: #2f5eb6;
+}
+#content b {
+    font-weight: bolder;
+}
+
+/* Rodapé */
+footer {
+    background-color: #000000bf;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+footer p {
+    font-size: 20px;
+    margin: 10px;
+}
+
+
+/* Tela <= 900px */
+@media (max-width: 900px) {
+    /* Cabeçalho */
+    header img {
+        margin: 15px;
+    }
+    header nav {
+        margin: 15px;
+    }
+    header nav li {
+        float: initial;
+        margin-left: 15px;
+    }
+
+    /* Conteudo */
+    #content img {
+        margin: 15px;
+    }
+    #content h1 {
+        margin: 15px;
+    }
+    #content h2 {
+        margin: 15px;
+    }
+    #content h3 {
+        margin: 15px;
+    }
+    #content p {
+        margin: 15px;
+    }
+
+    /* Rodapé */
+    footer p {
+        margin: 10px;
+    }
+}
+
+/* Tela <= 530px */
+@media (max-width: 530px) {
+    /* Cabeçalho */
+    header {
+        height: 105px;
+    }
+    header img {
+        height: 75px;
+    }
+    header nav li {
+        font-size: 100%;
+    }
+    
+    /* Conteudo */
+    #content {
+        padding-top: 110px;
+        padding-bottom: 35px;
+    }
+    #content h1 {
+        font-size: 35px;
+    }
+    #content h2 {
+        font-size: 29px;
+    }
+    #content h3 {
+        font-size: 15px;
+    }
+    #content h4 {
+        font-size: 12px;
+    }
+    #content p {
+        font-size: 12px;
+    }
+
+    /* Rodapé */
+    footer p {
+        font-size: 12px;
+    }
+}

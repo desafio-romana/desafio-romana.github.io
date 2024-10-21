@@ -1,1 +1,14 @@
-#content div{top:250px;text-align:center}#content h1{color:#fff;font-weight:400;font-size:80px;margin:0}#content p{font-weight:400;font-size:30px}
+#content div {
+    top: 250px;
+    text-align: center;
+}
+#content h1 {
+    color: #fff;
+    font-weight: normal;
+    font-size: 80px;
+    margin: 0;
+}
+#content p {
+    font-weight: normal;
+    font-size: 30px;
+}
