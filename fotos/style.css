@@ -1,0 +1,29 @@
+/* Imagens */
+#content div {
+    padding-top: 10px;
+    text-align: center;
+}
+#content div img {
+    padding: 5px;
+    margin: 0px;
+    max-height: 250px;
+    max-width: 85vw;
+}
+
+
+/* Tela <= 1100px */
+@media (max-width: 1100px) {
+    /* Imagens */
+    #content div img {
+        max-height: 200px;
+    }
+}
+
+
+/* Tela <= 530px */
+@media (max-width: 530px) {
+    /* Imagens */
+    #content div img {
+        max-height: 150px;
+    }
+}

@@ -15,7 +15,7 @@ jobs:
       - name: set-up-node
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Atualizado para usar a versão desejada
+          node-version: '14'
 
       - name: install-dependencies
         run: npm install html-minifier cssnano-cli -g
