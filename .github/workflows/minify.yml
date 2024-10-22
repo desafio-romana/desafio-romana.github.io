@@ -7,16 +7,16 @@ on:
 
 jobs:
   minify-assets:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: checkout-code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       
       # Istalar Node.js.
-      - name: install-dependencies
-        uses: actions/setup-node@v2
+      - name: install-nodejs
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '20'
       
       # Instalar npm e pacotes necessários. 
       - name: install-dependencies
@@ -35,7 +35,7 @@ jobs:
         run: find . -name '*.js' -exec sh -c 'uglifyjs "$1" -o "$1" --compress --mangle' _ {} \;
       
       - name: deploy-to-github-pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           publish_dir: .
